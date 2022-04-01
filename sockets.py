@@ -31,7 +31,7 @@ app.debug = True
 clients = list()
 
 
-#reference: https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
+# Reference: https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
 def send_all(msg):
     for client in clients:
         client.put(msg)
@@ -195,4 +195,4 @@ if __name__ == "__main__":
         and run
         gunicorn -k flask_sockets.worker sockets:app
     '''
-    os.system('gunicorn -k flask_sockets.worker sockets:app'
+    os.system('gunicorn -k flask_sockets.worker sockets:app')
